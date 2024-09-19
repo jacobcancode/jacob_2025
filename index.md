@@ -51,7 +51,7 @@ hide: true
     <ul id="achievementList"></ul>
 </div>
 
-<audio controls src="707db471-c834-494e-a3d9-ada985203ef6.mp3" title="Title"></audio>
+<audio id="clickSound" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio>
 
 <script>
     let cookies = 0;
