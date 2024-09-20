@@ -28,8 +28,7 @@ permalink: /Games/
         border: 1px solid #ccc;
     }
 </style>
-
-<img id="cookieImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Cookie_icon.svg/2048px-Cookie_icon.svg.png" alt="Cookie" />
+<img id="cookieImage" src="Cookie.png" alt="Cookie" />
 <p>Cookies: <span id="cookieCount">0</span></p>
 <p>Cookies per Second: <span id="cookiesPerSecond">0</span></p>
 
