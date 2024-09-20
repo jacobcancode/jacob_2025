@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Student Home
+title: The Nighty Nighthawk Page of Jacob
 description: Home Page
 hide: true
 ---
@@ -8,14 +8,9 @@ hide: true
 </p>
 <br>
 <br>
-<h1>The Better Snake Game</h1>
-<button id="launchButton">Click Me</button>
 
-<script>
-    document.getElementById('launchButton').addEventListener('click', function() {
-        window.open('snake_game.html', 'Snake Game', 'width=450,height=500');
-    });
-</script>
+
+
 
 <p style="text-align: center;">
     <img src="image.png" alt="Image Description" style="width: 45%; margin-right: 10px; display: inline-block;">
@@ -74,4 +69,59 @@ hide: true
         transition: background-color 0.3s, transform 0.2s;
     ">Goat</a>
 </div>
+<br>
+<br>
+<br>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DON'T PRESS ME</title>
+    <style>
+        body {
+            font-family: Arial, sa ns-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #bb86fc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #3700b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>U Should Press Me</h1>
+    <button id="soundButton">Play Sound</button>
+    <audio id="sound" src="Stupid.mp3" preload="auto"></audio>
 
+    <script>
+        let isPlaying = false;
+
+        document.getElementById('soundButton').addEventListener('click', () => {
+            if (!isPlaying) {
+                isPlaying = true;
+                playSound();
+            }
+        });
+
+        function playSound() {
+            const sound = document.getElementById('sound');
+            sound.currentTime = 0; // Restart sound
+            sound.play().catch(error => {
+                console.error("Error playing sound:", error);
+            });
+            sound.addEventListener('ended', playSound); // Play again when sound ends
+        }
+    </script>
+</body>
+</html>
