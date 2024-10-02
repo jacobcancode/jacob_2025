@@ -10,7 +10,7 @@ comments: true
 Welcome to the Cookie Clicker game! Click the cookie to collect cookies and buy bakers to increase your cookie production.
 
 <div id="cookie" style="font-size: 100px; cursor: pointer;">🍪</div>
-<audio id="clickSound" src="assets/ka-ching.mp3" preload="auto"></audio>
+<audio id="clickSound" src="/jacob_2025/assets/ka-ching.mp3" preload="auto"></audio>
 
 ## Cookies: <span id="cookieCount">0</span>
 
