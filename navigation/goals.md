@@ -19,7 +19,6 @@ comments: true
 * I likes Kush's lesson because it taught me how to do math
 * Math is very very usful for math class 
 * So learning how to code math let's me do math better
-* All the consepts espicially Kush's lesson will help me for the rest of my life
 <br/> <br/>
 * In our group lesson on organizing data and different types of variables, I found the information extremely useful for creating descriptions of products and items. We worked on a JSON page, which helped us understand how to structure data effectively. I also helped review other parts of the lesson for errors to ensure everything was accurate.
 
