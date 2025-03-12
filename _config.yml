@@ -5,8 +5,7 @@ github_username: jacobcancode
 github_repo: "jacob_2025" 
 baseurl: "/jacob_2025"
 future: true
-remote_theme: 
-  name: pages-themes/midnight@v0.2.0
+remote_theme: pages-themes/midnight@v0.2.0
 timeout: 60
 minima:
   skin: Dark
