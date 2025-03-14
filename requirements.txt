@@ -5,3 +5,6 @@ notebook
 requests
 python-dotenv
 pandas
+progress
+seaborn
+scikit-learn
