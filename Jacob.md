@@ -52,6 +52,7 @@ permalink: /vcard
   </div>
 </div>
 <script>
+function downloadVCard() {
 BEGIN:VCARD
 VERSION:3.0
 FN:Jacob Zierolf
@@ -59,3 +60,4 @@ EMAIL:jake.zierolf@gmail.com
 URL:https://github.com/jacobcancode
 NOTE:Connect with me on LinkedIn and GitHub!
 END:VCARD
+}
