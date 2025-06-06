@@ -37,7 +37,7 @@ permalink: /vcard
       </ul>
       <div class="pt-6 text-center">
         <button onclick="downloadVCard()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-md shadow hover:shadow-lg transition-transform transform hover:scale-105">
-          :page_facing_up: Download vCard
+         Download vCard
         </button>
       </div>
     </div>
@@ -52,3 +52,10 @@ permalink: /vcard
   </div>
 </div>
 <script>
+BEGIN:VCARD
+VERSION:3.0
+FN:Jacob Zierolf
+EMAIL:jake.zierolf@gmail.com
+URL:https://github.com/jacobcancode
+NOTE:Connect with me on LinkedIn and GitHub!
+END:VCARD
