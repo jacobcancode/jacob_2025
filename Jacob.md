@@ -36,38 +36,46 @@ permalink: /vcard
         </li>
       </ul>
       <div class="pt-6 text-center">
-        <button onclick="downloadVCard()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-md shadow hover:shadow-lg transition-transform transform hover:scale-105">
-         Download vCard
-        </button>
-      </div>
-    </div>
-    <!-- QR Code Card -->
-    <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center space-y-6">
-      <h2 class="text-xl font-semibold text-gray-800">Quick Connect</h2>
-      <div class="text-center">
-        <img src="" alt="vCard QR" class="rounded-lg shadow border border-gray-200" />
-        <p class="text-sm text-gray-600 mt-2">This Page</p>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
+        <script>
 function downloadVCard() {
+  // Create vCard data
+  const vCardData = `
 BEGIN:VCARD
 VERSION:3.0
 FN:Jacob Zierolf
 EMAIL:jake.zierolf@gmail.com
 URL:https://github.com/jacobcancode
 NOTE:Connect with me on LinkedIn and GitHub!
-END:VCARD;
- const blob = new Blob([vCardData], { type: 'text/vcard' });
+END:VCARD
+  `.trim();
+
+  // Create a Blob from the vCard data
+  const blob = new Blob([vCardData], { type: 'text/vcard' });
+
+  // Generate a URL for the Blob
   const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = '';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
+
+  try {
+    // Create a temporary anchor element for downloading
+    const a = document.createElement('a');
+    if (url) {
+      const fileName = 'Jacob-Zierolf.vcf'; // You can make this dynamic or configurable
+      a.download = fileName;
+    } else {
+      console.error('Failed to create Blob URL.');
+      return;
+    }
+    a.download = 'Jacob-Zierolf.vcf';
+
+    // Trigger the download
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  } finally {
+    // Ensure cleanup
+    URL.revokeObjectURL(url);
+</script>
   URL.revokeObjectURL(url);
 }
+</script>
 </script>
