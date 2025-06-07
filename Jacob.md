@@ -44,38 +44,9 @@ BEGIN:VCARD
 VERSION:3.0
 FN:Jacob Zierolf
 EMAIL:jake.zierolf@gmail.com
-URL:https://github.com/jacobcancode
+URL:https://github.22com/jacobcancode
 NOTE:Connect with me on LinkedIn and GitHub!
 END:VCARD
   `.trim();
 
-  // Create a Blob from the vCard data
-  const blob = new Blob([vCardData], { type: 'text/vcard' });
 
-  // Generate a URL for the Blob
-  const url = URL.createObjectURL(blob);
-
-  try {
-    // Create a temporary anchor element for downloading
-    const a = document.createElement('a');
-    if (url) {
-      const fileName = 'Jacob-Zierolf.vcf'; // You can make this dynamic or configurable
-      a.download = fileName;
-    } else {
-      console.error('Failed to create Blob URL.');
-      return;
-    }
-    a.download = 'Jacob-Zierolf.vcf';
-
-    // Trigger the download
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  } finally {
-    // Ensure cleanup
-    URL.revokeObjectURL(url);
-</script>
-  URL.revokeObjectURL(url);
-}
-</script>
-</script>
